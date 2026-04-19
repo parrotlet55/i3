@@ -1,0 +1,59 @@
+* {
+    /* 80% opacity black. Change B3 to D9 for more black, or 88 for more clear. */
+    background-color:            #000000B3; 
+    text-color:                  #ffffff;
+    font:                        "Terminus 32";
+}
+
+window {
+    fullscreen:                  true;
+    background-color:            @background-color;
+    /* This tells Compton to treat the window as a single layer */
+    transparency:                "real";
+}
+
+mainbox {
+    padding:                     25% 20%;
+    /* This removes the solid box in the middle */
+    background-color:            transparent;
+    children:                    [inputbar, listview];
+}
+
+inputbar {
+    background-color:            transparent;
+    padding:                     0 0 30px 0;
+    children:                    [entry];
+}
+
+entry {
+    background-color:            transparent;
+    horizontal-align:            0.5;
+    placeholder:                 "Search...";
+    placeholder-color:           #888888;
+}
+
+listview {
+    lines:                       5;
+    fixed-height:                true;
+    spacing:                     20px;
+    background-color:            transparent;
+    border:                      0px;
+}
+
+element {
+    padding:                     10px;
+    background-color:            transparent;
+}
+
+element-text {
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element selected {
+    /* Your signature Lavender highlight with a bit of transparency */
+    background-color:            #E6E6FACC;
+    text-color:                  #000000;
+}
